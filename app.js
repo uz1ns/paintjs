@@ -5,6 +5,7 @@ const range = document.getElementById("jsRange");
 const mode = document.getElementById("jsMode");
 const saveBtn = document.getElementById("jsSave"); 
 const clearBtn = document.getElementById("jsClear"); 
+const randomBtn = document.querySelector(".rainbow");
 
 const INITIAL_COLOR = "#2c2c2c";
 
@@ -98,6 +99,20 @@ function whiteBackground(){
     ctx.fillRect(0, 0, width, height);
 }
 
+function randomColor(){
+
+    const r = Math.floor(Math.random()*256);
+    const g = Math.floor(Math.random()*256);
+    const b = Math.floor(Math.random()*256);
+    
+    const rgb = "rgb(" + r  +", " + g + ", " + b + ")"; 
+    ctx.strokeStyle = rgb;
+    ctx.fillStyle = rgb;
+    
+    console.log(r, g, b);
+}
+
+
 
 if(canvas){
     canvas.addEventListener("mousemove", onMouseMove);
@@ -126,4 +141,8 @@ if(saveBtn) {
 
 if(clearBtn) {
     clearBtn.addEventListener("click", whiteBackground);
+}
+
+if(randomBtn) {
+    randomBtn.addEventListener("click", randomColor);
 }

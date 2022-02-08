@@ -63,3 +63,7 @@ body {
 .controls .controls__range {
     margin-bottom: 20px;
 }
+
+.rainbow {
+    background: linear-gradient( 135deg, orange, orange, orange, yellow, green, cyan, blue, violet, violet, violet );
+}
