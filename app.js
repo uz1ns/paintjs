@@ -100,7 +100,6 @@ function whiteBackground(){
 }
 
 function randomColor(){
-
     const r = Math.floor(Math.random()*256);
     const g = Math.floor(Math.random()*256);
     const b = Math.floor(Math.random()*256);
@@ -108,11 +107,7 @@ function randomColor(){
     const rgb = "rgb(" + r  +", " + g + ", " + b + ")"; 
     ctx.strokeStyle = rgb;
     ctx.fillStyle = rgb;
-    
-    console.log(r, g, b);
 }
-
-
 
 if(canvas){
     canvas.addEventListener("mousemove", onMouseMove);
